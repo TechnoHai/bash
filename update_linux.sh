@@ -1,16 +1,14 @@
 #!/bin/bash
-#cheking ths os type by the uniqe file in the etc folder
+#cheking ths os type by the ID field in os-release file
 os=$(grep -w ID  /etc/os-release)
-#centos=/etc/redhat-release 
-#ubuntu=/etc/os-release
 
-#check which file is int the etc folder and using the right package managment to run update . 
+#check the ID  field and using the right package managment to run update . 
 if [ $os == "ID="centos"" ]
 then
     echo "The OS is Centos "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update && sudo yum upgrade -y
+    sudo yum update -y && sudo yum upgrade -y
 	
 elif [ $os == "ID=fedora" ]
 then
