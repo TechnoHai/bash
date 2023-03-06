@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 servers=$(cat hosts.txt)
 
 for server in $servers
