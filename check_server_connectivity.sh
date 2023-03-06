@@ -1,11 +1,19 @@
 #!/bin/bash
+
+#####################################################################
+#this is a script to check if a server is alive by the ping command #
+#####################################################################
+
+#take server lists from hosts.txt file
 servers=$(cat hosts.txt)
 
+#for loop that ping each server 2 times and let the user know if the server is up or down
 for server in $servers
 do
 	ping -c 2 $server > /dev/null
 
-	if [ $? -eq 0 ]
+	#check the exit code of the ping cmd and give output acordinly 
+	if [ $? -eq 0 ] 
 	then
                 echo
 		echo "###########################################"
