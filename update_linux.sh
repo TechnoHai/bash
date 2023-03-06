@@ -1,7 +1,8 @@
 #!/bin/bash
 #cheking ths os type by the ID field in os-release file
 os=$(grep -w ID  /etc/os-release)
-#log file for the updating procces
+
+#log files for the updating procces
 log_file=/var/log/update_linux_log
 error_log=/var/log/update_linux_error
 
