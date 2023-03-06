@@ -12,7 +12,7 @@ then
     echo "The OS is Centos "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 
+    sudo yum update -y && sudo yum upgrade -y 1>$log_file 2>$error_log
     #check if the update went succsfully or not and log it.
     if [ $? -ne 0 ]
     then
@@ -27,7 +27,7 @@ then
     echo "The OS is Fedora "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y
+    sudo yum update -y && sudo yum upgrade -y 1>$log_file 2>$error_log
     #check if the update went succsfully or not and log it.
     if [ $? -ne 0 ]
     then
@@ -42,8 +42,8 @@ then
      echo "The OS is Ubunto "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y
-     sudo apt upgrade -y
+     sudo apt update -y && sudo apt upgrade -y 1>$log_file 2>$error_log
+     
     #check if the update went succsfully or not and log it.
     if [ $? -ne 0 ]
     then
@@ -58,8 +58,8 @@ then
      echo "The OS is rocky "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y
-     sudo apt upgrade -y 
+     sudo apt update -y && sudo apt upgrade -y 1>$log_file 2>$error_log
+      
     #check if the update went succsfully or not and log it.
     if [ $? -ne 0 ]
     then
