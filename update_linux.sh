@@ -17,7 +17,7 @@ check_exit_code() {
 }
 
 #check the ID  field and using the right package management to run update .
-#check if the os is cetnos
+#check if the os is Centos
 if [ $os == "ID="centos"" ]
 then
     echo "The OS is Centos "
@@ -28,7 +28,7 @@ then
     check_exit_code
 
 #check if the os is fedora	
-elif [ $os == "ID=fedora" ]
+elif [ "$os" == "ID=fedora" ]
 then
     echo "The OS is Fedora "
     sleep 3
