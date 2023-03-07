@@ -1,0 +1,3 @@
+#mount a smb share
+sudo mount -t cifs -o username=serverUserName //myServerIpAdress/sharename /mnt/myFolder/
+sudo mount -t cifs -o username=hai,password= //192.168.174.1/bash /mnt/scripts

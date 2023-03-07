@@ -3,7 +3,7 @@
 os=$(grep -w ID  /etc/os-release)
 
 #log files for the updating process
-log_file=/var/log/update_linux_log
+update_log=/var/log/update_linux_log
 error_log=/var/log/update_linux_error
 
 #a function that check the exit code after the update is running and tell the user where to look for logs
@@ -12,7 +12,7 @@ check_exit_code() {
     then
         echo "An error accrued please check the $error_log file"
     else 
-        echo "The update process finish successfully, you can check $log_file for details"
+        echo "The update process finish successfully, you can check $update_log for details"
     fi
 }
 
@@ -23,7 +23,7 @@ then
     echo "The OS is Centos "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 1>$log_file 2>$error_log
+    sudo yum update -y && sudo yum upgrade -y 1>$update_log 2>$error_log
     #check if the update went successfully or not and log it.
     check_exit_code
 
@@ -33,7 +33,7 @@ then
     echo "The OS is Fedora "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 1>$log_file 2>$error_log
+    sudo yum update -y && sudo yum upgrade -y 1>$update_log 2>$error_log
     #check if the update went successfully or not and log it.
     check_exit_code
 
@@ -43,7 +43,7 @@ then
      echo "The OS is Ubuntu "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 1>$log_file 2>$error_log
+     sudo apt update -y && sudo apt upgrade -y 1>$update_log 2>$error_log
      
     #check if the update went successfully or not and log it.
     check_exit_code
@@ -54,7 +54,7 @@ then
      echo "The OS is rocky "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 1>$log_file 2>$error_log
+     sudo apt update -y && sudo apt upgrade -y 1>$update_log 2>$error_log
       
     #check if the update went successfully or not and log it.
    check_exit_code
