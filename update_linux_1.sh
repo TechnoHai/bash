@@ -2,7 +2,7 @@
 #cheking ths os type by the ID field in os-release file
 release_file=/etc/os-release
 
-#check the ID  field and using the right package managment to run update . 
+#check the ID  field and using the right package management to run update .
 if grep -q -i "centos" $release_file
 then
     echo "The OS is Centos "
@@ -19,7 +19,7 @@ then
 	
 elif grep -q -i "ubuntu" $release_file
 then
-     echo "The OS is Ubunto "
+     echo "The OS is Ubuntu "
      sleep 3
      echo "Updating And Upgrading The os "
      sudo apt update -y

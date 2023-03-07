@@ -6,6 +6,7 @@ os=$(grep -w ID  /etc/os-release)
 log_file=/var/log/update_linux_log
 error_log=/var/log/update_linux_error
 
+#a function that check the rxit code after the update is runing and tell the user where to look for logs
 check_exit_code() {
     if [ $? -ne 0 ]
     then
