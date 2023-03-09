@@ -27,6 +27,8 @@ then
     #check if the update went successfully or not and log it.
     check_exit_code
 
+
+
 #check if the os is fedora	
 elif [ "$os" == "ID=fedora" ]
 then
@@ -48,6 +50,16 @@ then
     #check if the update went successfully or not and log it.
     check_exit_code
 
+elif [[ $os == "ID=pop" ]]
+then
+     echo "The OS is popOS "
+     sleep 3
+     echo "Updating And Upgrading The os "
+     sudo apt update -y && sudo apt upgrade -y 1>$update_log 2>$error_log
+
+    #check if the update went successfully or not and log it.
+    check_exit_code
+
 #check if the os is rocky
 elif [[ $os == "ID="rocky ]] 
 then
@@ -58,6 +70,6 @@ then
       
     #check if the update went successfully or not and log it.
    check_exit_code
-fi           
+fi
 
 
