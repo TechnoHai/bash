@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #cheking ths os type by the ID field in os-release file
 os=$(grep -w ID  /etc/os-release)
 
