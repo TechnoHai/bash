@@ -46,7 +46,7 @@ then
      echo "The OS is Ubuntu "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 1>$update_log 2>$error_log
+     sudo apt update -y && sudo apt upgrade -y 
      
     #check if the update went successfully or not and log it.
     check_exit_code
