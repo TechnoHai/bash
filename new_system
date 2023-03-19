@@ -1,9 +1,11 @@
 
 #exa modern ls
-sudo apt install exa
+sudo apt install exa -y
 #change ls to exa by alias
 alias ls='exa'
 #add the alias permanently
 echo "alias ls='exa'" ~/.bashrc
 #install vidio codec and more
-sudo apt install ubuntu-restricted-extras
+sudo apt install ubuntu-restricted-extras -y
+#install fish shell
+apt install fish -y
