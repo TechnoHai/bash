@@ -5,7 +5,10 @@ sudo apt install exa -y
 alias ls='exa'
 #add the alias permanently
 echo "alias ls='exa'" ~/.bashrc
-#install vidio codec and more
-sudo apt install ubuntu-restricted-extras -y
 #install fish shell
 apt install fish -y
+sudo apt install htop -y
+sudo apt install exa -y
+sudo apt install git -y
+#install zhell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
