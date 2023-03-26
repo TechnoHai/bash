@@ -7,8 +7,11 @@ alias ls='exa'
 echo "alias ls='exa'" ~/.bashrc
 #install fish shell
 apt install fish -y
+
 sudo apt install htop -y
 sudo apt install exa -y
 sudo apt install git -y
+
 #install zhell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
