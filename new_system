@@ -16,5 +16,5 @@ sudo apt install git -y
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 
-sudo snap install nvim  --classic
+sudo snap install nvim  --classic -y
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim 
