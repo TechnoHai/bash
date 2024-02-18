@@ -2,9 +2,9 @@
 #exa modern ls
 sudo apt install exa -y
 #change ls to exa by alias
-alias ls='exa'
+alias ls='exa -lha'
 #add the alias permanently
-echo "alias ls='exa'"  ~/.zshrc
+echo "alias ls='exa -lha'"  ~/.zshrc
 #install fish shell
 apt install fish -y
 
