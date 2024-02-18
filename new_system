@@ -4,7 +4,7 @@ sudo apt install exa -y
 #change ls to exa by alias
 alias ls='exa'
 #add the alias permanently
-echo "alias ls='exa'" ~/.bashrc
+echo "alias ls='exa'"  ~/.zshrc
 #install fish shell
 apt install fish -y
 
