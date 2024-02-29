@@ -1,0 +1,377 @@
+: 1708110223:0;ls
+: 1708110243:0;cat new_system
+: 1708110249:0;exa
+: 1708110252:0;exa -lha
+: 1708110284:0;echo "alias ls='exa -lha'" ~/.bashrc
+: 1708110285:0;ls
+: 1708110302:0;exa -lha
+: 1708110327:0;alias ls=exa -lha
+: 1708110329:0;ls
+: 1708110342:0;alias ls='exa -lha'
+: 1708110344:0;ls
+: 1708111520:0;cat /etc/sysconfig/network
+: 1708111548:0;cd /etc/systemd/
+: 1708111549:0;ls
+: 1708111555:0;cat network
+: 1708111565:0;cat networkd.conf
+: 1708164940:0;pwd
+: 1708164970:0;timedatectl set-time 12:16
+: 1708164976:0;date
+: 1708164992:0;timedatectl
+: 1708165067:0;timedatectl list-timezones
+: 1708165097:0;timedatectl set-timezone Asia/Jerusalem
+: 1708165168:0;systemctl
+: 1708165247:0;systemctl --type=service,
+: 1708165266:0;htop
+: 1708165420:0;cd /home/hai/
+: 1708165420:0;ls
+: 1708165429:0;exa
+: 1708165433:0;exa -lha
+: 1708165441:0;alias ls='exa -lha'
+: 1708165444:0;ls
+: 1708165788:0;date
+: 1708173588:0;ip a s
+: 1708173673:0;ip link show ens37
+: 1708173739:0;ip addr add dev ens37 192.168.56.38 255.255.255.0
+: 1708173833:0;ls /etc/netplan/
+: 1708173943:0;ip addr add 192.168.56./24 dev ens37
+: 1708173951:0;ip addr add 192.168.56.38/24 dev ens37
+: 1708173957:0;sudo ip addr add 192.168.56.38/24 dev ens37
+: 1708173965:0;ip a s
+: 1708174144:0;cd /etc/netplan/
+: 1708174144:0;ls
+: 1708174151:0;touch 01-network-manager-all.yaml
+: 1708174155:0;sudo touch 01-network-manager-all.yaml
+: 1708174167:0;vim 01-network-manager-all.yaml
+: 1708174211:0;sudo vim 01-network-manager-all.yaml
+: 1708174374:0;cat 01-network-manager-all.yaml
+: 1708174376:0;reboot
+: 1708174380:0;sudo reboot
+: 1708174538:0;ip a s
+: 1708174574:0;ip link set ens33 up
+: 1708174578:0;sudo ip link set ens33 up
+: 1708174586:0;ip a s
+: 1708174666:0;cd /etc/netplan/
+: 1708174667:0;ls
+: 1708174671:0;cat 01-network-manager-all.yaml
+: 1708174693:0;sudo vim 01-network-manager-all.yaml
+: 1708174944:0;ls
+: 1708174947:0;cat 50-cloud-init.yaml
+: 1708174953:0;sudo reboot
+: 1708175003:0;cd /etc/netplan/\ 
+: 1708175005:0;cd /etc/netplan/
+: 1708175008:0;ls
+: 1708175021:0;sudo vim 01-network-manager-all.yaml
+: 1708175044:0;ip a s
+: 1708175086:0;ls
+: 1708175092:0;cat 01
+: 1708175096:0;cat 01-network-manager-all.yaml
+: 1708175113:0;rm 01-network-manager-all.yaml
+: 1708175120:0;sudo rm 01-network-manager-all.yaml
+: 1708175155:0;sudo reboot
+: 1708175195:0;ip a s
+: 1708175240:0;nmcli connection show
+: 1708175260:0;sudo snap install network-manager
+: 1708175282:0;nmcli connection show
+: 1708175419:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708175514:0;sudo reboot
+: 1708175559:0;ip a s
+: 1708175595:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708175642:0;sudo rebbot
+: 1708175647:0;sudo reboot
+: 1708175698:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708175794:0;sudo reboot
+: 1708175821:0;ip a s
+: 1708175913:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708175984:0;ip a s
+: 1708175986:0;cls
+: 1708175990:0;clear
+: 1708175993:0;ip s s
+: 1708175996:0;ip a s
+: 1708176020:0;ip addr add 192.168.56.38/24 dev ens37
+: 1708176024:0;sudo ip addr add 192.168.56.38/24 dev ens37
+: 1708176028:0;ip a s
+: 1708176102:0;df
+: 1708176107:0;df -h
+: 1708176168:0;fdisk -l
+: 1708176173:0;sudo fdisk -l
+: 1708176296:0;sudo fdisk /dev/sdb
+: 1708176391:0;fdisk -l
+: 1708176395:0;sudo fdisk -l
+: 1708176413:0;pwd
+: 1708176475:0;mkfs.ext4 /dev/sdb1
+: 1708176479:0;sudo mkfs.ext4 /dev/sdb1
+: 1708176534:0;ls
+: 1708176555:0;mkdir data
+: 1708176581:0;mount /dev/sdb1 /home/hai/data
+: 1708176588:0;sudo mount /dev/sdb1 /home/hai/data
+: 1708176694:0;echo "/dev/sdb1	home/hai/data	ext4	defaults     0   0" /etc/fstab
+: 1708176704:0;cat /etc/fstab
+: 1708176745:0;ls
+: 1708176752:0;touch 1.txt
+: 1708176771:0;echo "/dev/sdb1	home/hai/data	ext4	defaults     0   0" /home/hai/1.txt
+: 1708176773:0;cat 1.txt
+: 1708176792:0;echo hello 1.txt
+: 1708176810:0;echo "/dev/sdb1	home/hai/data	ext4	defaults     0   0" >  /home/hai/1.txt
+: 1708176813:0;cat 1
+: 1708176816:0;cat 1.txt
+: 1708176832:0;echo "/dev/sdb1	home/hai/data	ext4	defaults     0   0" > /etc/fstab
+: 1708176836:0;sudo echo "/dev/sdb1	home/hai/data	ext4	defaults     0   0" > /etc/fstab
+: 1708176866:0;vim /etc/fstab
+: 1708176875:0;sudo vim /etc/fstab
+: 1708177367:0;cd /home/hai/data/
+: 1708177368:0;ls
+: 1708177377:0;touch 1.txt
+: 1708177382:0;touch 1.txtls
+: 1708177383:0;ls
+: 1708177388:0;cd ..
+: 1708177390:0;ls
+: 1708177400:0;ls -lha
+: 1708177488:0;sudo chown hai data/
+: 1708177496:0;ls -lha
+: 1708177504:0;cd data/
+: 1708177509:0;touch 1.txtls
+: 1708177522:0;cd ..
+: 1708177524:0;cd git
+: 1708177526:0;cd bash/
+: 1708177533:0;cat new_system
+: 1708177573:0;echo "alias ls='exa -lha'" ~/.zshrc
+: 1708177578:0;alias ls='exa -lha'
+: 1708177579:0;ls
+: 1708177587:0;sudo reboot
+: 1708192099:0;mount
+: 1708192152:0;fdisk -l
+: 1708192156:0;sudo fdisk -l
+: 1708192177:0;cd /home/hai/data/
+: 1708192179:0;ls
+: 1708192189:0;mount -?
+: 1708192197:0;mount /?
+: 1708192285:0;fdisk 1.txtls
+: 1708192296:0;ls -help
+: 1708192309:0;mount --help
+: 1708192335:0;mount -lh
+: 1708192350:0;mount -T
+: 1708192365:0;man
+: 1708192372:0;man mount
+: 1708192647:0;sudo apt install nfs-kernel-server
+: 1708192664:0;mkdir --help
+: 1708192683:0;mkdir nfs_share1
+: 1708192686:0;ls
+: 1708192693:0;alias ls='exa -lha'
+: 1708192693:0;ls
+: 1708192710:0;ls -lha
+: 1708192761:0;chown -R nobody:nogroup nfs_share1
+: 1708192764:0;sudo chown -R nobody:nogroup nfs_share1
+: 1708192797:0;chmod 777 nfs_share1/
+: 1708192801:0;sudo chmod 777 nfs_share1/
+: 1708192803:0;ls
+: 1708192861:0;sudo vim /etc/exports
+: 1708192923:0;cat /etc/exports
+: 1708192970:0;sudo exportfs -a
+: 1708193002:0;sudo systemctl restart  nfs-server.service
+: 1708193582:0;sudo systemctl restart  nfs-su
+: 1708193588:0;sudo vim /etc/exports
+: 1708193608:0;ip a s
+: 1708193622:0;ip addr add 192.168.56.38/24 dev ens37
+: 1708193626:0;sudo ip addr add 192.168.56.38/24 dev ens37
+: 1708193632:0;ping 192.168.56.38
+: 1708193964:0;ping 192.168.56.111
+: 1708193967:0;ping 192.168.56.112
+: 1708194378:0;ping 192.168.56.101
+: 1708194759:0;traceroute 8.8.8.8
+: 1708195802:0;sudo apt install nfs-common
+: 1708195819:0;sudo mkdir -p /mnt/nfs_clientshare
+: 1708195859:0;sudo mount 192.168.56.111:/win_share1  /mnt/nfs_clientshare
+: 1708195875:0;sudo mount -v 192.168.56.101:/win_share1  /mnt/nfs_clientshare
+: 1708195937:0;sudo mount -v 192.168.56.101:/win_nfs1  /mnt/nfs_clientshare
+: 1708196044:0;cd /mnt/nfs_clientshare/
+: 1708196056:0;sudo cd /mnt/nfs_clientshare/
+: 1708196066:0;cd /mnt
+: 1708196068:0;ls
+: 1708196080:0;cd nfs_clientshare/
+: 1708196093:0;chmod 777 nfs_clientshare/
+: 1708196098:0;sudo chmod 777 nfs_clientshare/
+: 1708196108:0;cd nfs_clientshare/
+: 1708196109:0;ls
+: 1708196113:0;touch 1.txtls
+: 1708196597:0;cd
+: 1708196599:0;cat /etc/exports
+: 1708197555:0;apt install lnav
+: 1708197565:0;sudo apt install lnav
+: 1708197665:0;lnav /var/log/auth.log
+: 1708203152:0;sudo ufw status
+: 1708203669:0;cd /home/hai/data/
+: 1708203671:0;ls
+: 1708203680:0;ls -lha
+: 1708203763:0;cat /etc/exports
+: 1708203882:0;cd ..
+: 1708203887:0;alias ls='exa -lha'
+: 1708203888:0;ls
+: 1708203922:0;sudo mkdir -p /mnt/nfs_share
+: 1708203930:0;sudo chown -R nobody:nogroup /mnt/nfs_share/
+: 1708203938:0;sudo chmod 777 /mnt/nfs_share/
+: 1708203957:0;sudo vim /etc/exports
+: 1708203995:0;sudo systemctl restart nfs-kernel-server
+: 1708204007:0;sudo exportfs -a
+: 1708204009:0;sudo systemctl restart nfs-kernel-server
+: 1708204093:0;cd /mnt/
+: 1708204094:0;ls
+: 1708204106:0;cat /etc/exports
+: 1708204462:0;exportfs -r
+: 1708204468:0;sudo exportfs -r
+: 1708204653:0;sudo vim /etc/exports
+: 1708204694:0;sudo exportfs -r
+: 1708204756:0;sudo vim /etc/exports
+: 1708204775:0;sudo exportfs -r
+: 1708204796:0;sudo vim /etc/exports
+: 1708204819:0;sudo exportfs -r
+: 1708249282:0;cat /etc/exports
+: 1708282217:0;ip a s
+: 1708282237:0;cat /etc/netplan/
+: 1708282248:0;cat /etc/netplan/01-netcfg.yaml
+: 1708282391:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708282515:0;ip a flush ens33
+: 1708282520:0;sudo ip a flush ens33
+: 1708282560:0;systemctl restart network\ 
+: 1708282607:0;ip a s
+: 1708282676:0;sudo systemctl restart networking
+: 1708282905:0;ip a s
+: 1708282921:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708283071:0;cd /etc/netplan/
+: 1708283072:0;ls
+: 1708283084:0;cat 00-default-nm-renderer.yaml
+: 1708283172:0;cat 50-cloud-init.yaml
+: 1708283177:0;sudo cat 50-cloud-init.yaml
+: 1708283213:0;cp 50-cloud-init.yaml 50-cloud-init.yaml.bak
+: 1708283219:0;sudo cp 50-cloud-init.yaml 50-cloud-init.yaml.bak
+: 1708283235:0;sudo rm 50-cloud-init.yaml
+: 1708283254:0;sudo netplan 01-netcfg.yaml
+: 1708283268:0;sudo netplan apply
+: 1708283303:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708283348:0;cat 50-cloud-init.yaml.bak
+: 1708283352:0;sudo cat 50-cloud-init.yaml.bak
+: 1708283361:0;sudo netplan apply
+: 1708283423:0;ip a s
+: 1708283437:0;ping 8.8.8.8
+: 1708283465:0;cat /etc/netplan/01-netcfg.yaml
+: 1708283550:0;ip a s
+: 1708283557:0;ip a s | grep ens
+: 1708283607:0;vim /etc/netplan/01-netcfg.yaml
+: 1708283678:0;sudo vim /etc/netplan/01-netcfg.yaml
+: 1708283741:0;sudo netplan apply
+: 1708283755:0;ip a s
+: 1708283773:0;lsblk
+: 1708283798:0;fdisk -l
+: 1708283802:0;sudo fdisk -l
+: 1708330569:0;pam
+: 1708330610:0;cd ~
+: 1708330612:0;ls
+: 1708330622:0;alias ls='exa -lha'
+: 1708330623:0;ls
+: 1708330632:0;cd git/
+: 1708330633:0;ls
+: 1708330653:0;cd bash/
+: 1708330653:0;ls
+: 1708330662:0;cat update_linux
+: 1708330666:0;cat update_linux.sh
+: 1708330803:0;./update_linux.sh
+: 1708330861:0;cat /var/log/update_linux_log
+: 1708331118:0;00~update_log=/var/log/update_linux_log
+: 1708331118:0;error_log=/var/log/update_linux_error
+: 1708331135:0;touch var/log/update_linux_log\
+
+: 1708331184:0;touch /var/log/update_linux_error.log
+: 1708331188:0;sudo touch /var/log/update_linux_error.log
+: 1708331227:0;sudo touch /var/log/update_linux_log.log
+: 1708331236:0;vim update_linux
+: 1708331264:0;vim  update_linux.sh
+: 1708331293:0;./update_linux.sh
+: 1708331305:0;cat /var/log/update_linux_log
+: 1708331324:0;touch --help
+: 1708331355:0;sudo touch /var/log/update_linux_log.log
+: 1708331358:0;cat /var/log/update_linux_log
+: 1708331364:0;cat /var/log/update_linux_log.log
+: 1708331562:0;echo hello >  /var/log/update_linux_log.log
+: 1708331565:0;sudo echo hello >  /var/log/update_linux_log.log
+: 1708331568:0;cat /var/log/update_linux_log.log
+: 1708331615:0;sudo echo "hello" >  /var/log/update_linux_log.log
+: 1708331618:0;sudo sudo echo "hello" >  /var/log/update_linux_log.log
+: 1708331708:0;chown -R hai /var/log/update_linux_log.log
+: 1708331712:0;sudo chown -R hai /var/log/update_linux_log.log
+: 1708331718:0;sudo echo "hello" >  /var/log/update_linux_log.log
+: 1708331720:0;cat /var/log/update_linux_log.log
+: 1708331734:0;touch /var/log/update_linux_error.log
+: 1708331786:0;sudo visudo
+: 1708331877:0;touch /var/log/update_linux_error.log
+: 1708331884:0;sudo visudo
+: 1708331908:0;cat /etc/passwd
+: 1708331998:0;sudo usermod -aG sudo hai
+: 1708332010:0;sudo usermod -aG root hai
+: 1708332014:0;touch /var/log/update_linux_error.log
+: 1708332025:0;su root
+: 1708332084:0;apt update
+: 1708332095:0;sudo visudo
+: 1708332173:0;sudo usermod -aG sudo  hai
+: 1708332180:0;cat /etc/passwd
+: 1708332212:0;id
+: 1708332237:0;apt update
+: 1708332240:0;sudo apt update
+: 1708332254:0;touch /var/log/update_linux_error.log
+: 1708332257:0;sudo touch /var/log/update_linux_error.log
+: 1708332265:0;ls  /var/log/update_linux_error.log
+: 1708332295:0;exa --help
+: 1708334167:0;pwd
+: 1708334170:0;cd bash/
+: 1708334176:0;cd git/bash/
+: 1708334177:0;ls
+: 1708334194:0;chmod 766 install_docker.sh
+: 1708334200:0;./install_docker.sh
+: 1708334288:0;docker
+: 1708334299:0;sudo snap install docker
+: 1708334315:0;docker
+: 1708334327:0;docker run alpine
+: 1708334335:0;docker ps
+: 1708334569:0;docker image ls
+: 1708334584:0;docker run -v alpine
+: 1708334605:0;docker  -v run  alpine
+: 1708334621:0;echo 0$
+: 1708334634:0;ls
+: 1708334641:0;cat update_linux.sh
+: 1708334657:0;cat $?
+: 1708334666:0;eco $?
+: 1708334673:0;echo $?
+: 1708334686:0;docker run alpine
+: 1708334693:0;echo $?
+: 1708343562:0;docker run --name postgres01 -d -e POSTGRES_PASSWORD=password -p5001:5432 postgres
+: 1708343580:0;docker ps
+: 1708343602:0;docker exec -it e7ed41e93b2c /bin/bash
+: 1708346219:0;docker ps
+: 1708346235:0;docker stop $(docker ps)
+: 1708346251:0;docker ps
+: 1708346293:0;docker pull mongo
+: 1708346341:0;docker pull mongo-express
+: 1708346364:0;docker image ls
+: 1708346478:0;docker network ls
+: 1708346523:0;docker network create mongo-network
+: 1708346525:0;docker network ls
+: 1708346919:0;docker run -p 27017:27017 -d --name mongoDB -e MONGO_INITDB_ROOT_USERNAME=admin \\
+	-e MONGO_INITDB_ROOT_PASSWORD=secret \ -net mongonetwork mongo
+: 1708346982:0;docker run -p 27017:27017 -d --name mongoDB -net mongo-network -e MONGO_INITDB_ROOT_USERNAME=admin \\
+	-e MONGO_INITDB_ROOT_PASSWORD=secret
+: 1708347007:0;docker run -p 27017:27017 -d --name mongoDB --net mongo-network -e MONGO_INITDB_ROOT_USERNAME=admin \\
+	-e MONGO_INITDB_ROOT_PASSWORD=secret
+: 1708347019:0;docker run -p 27017:27017 -d --name mongoDB --net mongo-network -e MONGO_INITDB_ROOT_USERNAME=admin \\
+	-e MONGO_INITDB_ROOT_PASSWORD=secret mongo
+: 1708347025:0;docker ps
+: 1708347093:0;sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"\
+
+: 1708347407:0;docker ps
+                                        : 1708418733:0;nmtui
+: 1708418759:0;apt update
+: 1708418767:0;sudo apt update
+: 1708418807:0;sudo apt install network-manager
+: 1708418820:0;nmtui
+: 1708418862:0;ip a s
+: 1708945284:0;ip a s
+: 1708945401:0;sudo curl -sfL https://get.k3s.io | sh -
+: 1708945434:0;cp /home/hai/.zsh_history /home/hai/.zsh_history.bak
