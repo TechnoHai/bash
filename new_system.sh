@@ -1,32 +1,56 @@
 #!/bin/bash
-#exa modern ls
+# This script installs various utilities and tools on a Linux system.
+
+# Install 'exa', a modern replacement for 'ls' with more features.
 sudo apt install exa -y
-#change ls to exa by alias
+
+# Change the default 'ls' command to 'exa' with additional options for better output.
 alias ls='exa -lha'
-#add the alias permanently to .zshrc for persistent use across sessions
+
+# Add the alias permanently to .zshrc for persistent use across sessions.
 echo "alias ls='exa -lha'" >> ~/.zshrc
-#install fish shell for a more advanced command line experience
+
+# Install 'fish', an advanced and user-friendly command line shell.
 apt install fish -y
 
 # Install system monitoring tools
-sudo apt install htop -y # Interactive process viewer
-sudo apt install exa -y # Modern replacement for 'ls'
-sudo apt install git -y # Version control system
-sudo apt install btop -y # Resource monitor that shows usage and stats for processor, memory, disks, network, and processes
+sudo apt install htop -y # Interactive process viewer.
+sudo apt install exa -y # Modern replacement for 'ls', installed again for redundancy.
+sudo apt install git -y # Version control system, essential for developers.
+sudo apt install btop -y # Resource monitor that shows usage and stats for processor, memory, disks, network, and processes.
 
-#install homebrew, the missing package manager for macOS (or Linux)
+# Install Homebrew, a package manager for macOS (or Linux), to manage additional software not included in the default repositories.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Configure Homebrew in .zshrc for persistent use.
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/hai/.zshrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-#install atuin a command history manager for easier retrieval of past commands
+# Install 'atuin', a command history manager for easier retrieval of past commands.
 brew install atuin
-atuin register -u hai -e hai.sarusi@gmail.com # Register user for atuin
-atuin key # Generate and display atuin encryption key
-#shop paddle disagree position divorce blast december index rhythm upgrade olive ribbon deer page hamster manual tree struggle often chicken envelope humble captain payment
+# Commented out: Registration and key generation for 'atuin'.
+#atuin register -u hai -e hai.sarusi@gmail.com
+#atuin key
+# Import existing shell history into 'atuin'.
+atuin import auto
 
-#install zsh, a shell designed for interactive use, although it is also a powerful scripting language
+# Install 'dust', a more intuitive version of 'du', for checking disk usage.
+brew install dust
+
+# Install 'bat', an alternative to 'cat' with syntax highlighting and Git integration.
+brew install bat
+
+# Installs 'tldr', a simplified and community-driven man pages with practical examples
+brew install tldr   
+
+# Install 'zsh', a shell designed for interactive use and a powerful scripting language.
 sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)" # Install zsh4humans for a turnkey configuration
+# Install zsh4humans for a turnkey zsh configuration, enhancing the shell experience.
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 
-# Install Neovim with AstroNvim configuration for an enhanced Vim experience
+# Install Neovim with AstroNvim, a pre-configured setup for an enhanced Vim experience.
 sudo snap install nvim  --classic -y
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim 
+#git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim 
+
+mkdir -p ~/git
+cd ~/git
+git clone 
