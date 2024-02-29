@@ -29,7 +29,7 @@ then
     echo "The OS is Centos "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 1>$update_log 2>$error_log
+    sudo yum update -y && sudo yum upgrade -y 1>>$update_log 2>>$error_log
     #check if the update went successfully or not and log it.
     check_exit_code
 
@@ -41,7 +41,7 @@ then
     echo "The OS is Fedora "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 1>$update_log 2>$error_log
+    sudo yum update -y && sudo yum upgrade -y 1>>$update_log 2>>$error_log
     #check if the update went successfully or not and log it.
     check_exit_code
 
@@ -51,7 +51,7 @@ then
      echo "The OS is Ubuntu "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 
+     sudo apt update -y && sudo apt upgrade -y 1>>$update_log 2>>$error_log
      
     #check if the update went successfully or not and log it.
     check_exit_code
@@ -61,7 +61,7 @@ then
      echo "The OS is popOS "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 1>$update_log 2>$error_log
+     sudo apt update -y && sudo apt upgrade -y 1>> $update_log 2>>$error_log
 
     #check if the update went successfully or not and log it.
     check_exit_code
@@ -72,7 +72,7 @@ then
      echo "The OS is rocky "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 1>$update_log 2>$error_log
+     sudo apt update -y && sudo apt upgrade -y 1>>$update_log 2>>$error_log
       
     #check if the update went successfully or not and log it.
    check_exit_code
