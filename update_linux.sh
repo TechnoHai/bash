@@ -1,9 +1,14 @@
 #!/bin/bash
 
+# This script updates the Linux system based on its distribution by identifying the distribution ID from /etc/os-release.
+# It logs the update process and errors to specific log files.
+
 #cheking ths os type by the ID field in os-release file
 os=$(grep -w ID  /etc/os-release)
 
 #log files for the updating process
+touch /var/log/update_linux_log
+touch /var/log/update_linux_error
 update_log=/var/log/update_linux_log
 error_log=/var/log/update_linux_error
 
