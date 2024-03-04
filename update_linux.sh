@@ -29,7 +29,7 @@ then
     echo "The OS is Centos "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 1>>$update_log 2>>$error_log
+    sudo dnf update -y && sudo dnf upgrade -y 1>>$update_log 2>>$error_log
     #check if the update went successfully or not and log it.
     check_exit_code
 
@@ -41,14 +41,14 @@ then
     echo "The OS is Fedora "
     sleep 3
     echo "Updating And Upgrading The os"
-    sudo yum update -y && sudo yum upgrade -y 1>>$update_log 2>>$error_log
+    sudo dnf update -y && sudo dnf upgrade -y 1>>$update_log 2>>$error_log
     #check if the update went successfully or not and log it.
     check_exit_code
 
-#check if the os is ubuntu	
-elif [[ $os == "ID=ubuntu" ]] 
+#check if the os is Ubuntu or popOS
+elif [[ $os == "ID=ubuntu" ]] || [[ $os == "ID=pop" ]] 
 then
-     echo "The OS is Ubuntu "
+     echo "The OS is either Ubuntu or popOS "
      sleep 3
      echo "Updating And Upgrading The os "
      sudo apt update -y && sudo apt upgrade -y 1>>$update_log 2>>$error_log
@@ -56,6 +56,7 @@ then
     #check if the update went successfully or not and log it.
     check_exit_code
 
+: <<'COMMENT'
 elif [[ $os == "ID=pop" ]]
 then
      echo "The OS is popOS "
@@ -65,6 +66,7 @@ then
 
     #check if the update went successfully or not and log it.
     check_exit_code
+COMMENT
 
 #check if the os is rocky
 elif [[ $os == "ID="rocky ]] 
@@ -72,7 +74,7 @@ then
      echo "The OS is rocky "
      sleep 3
      echo "Updating And Upgrading The os "
-     sudo apt update -y && sudo apt upgrade -y 1>>$update_log 2>>$error_log
+     sudo dnf update -y && sudo dnf upgrade -y 1>>$update_log 2>>$error_log
       
     #check if the update went successfully or not and log it.
    check_exit_code

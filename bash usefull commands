@@ -1,5 +1,17 @@
-#!/bin/bash
-#mount a smb share
+# Mount a SMB share using cifs
 sudo mount -t cifs -o username=serverUserName //myServerIpAdress/sharename /mnt/myFolder/
 sudo mount -t cifs -o username=hai,password= //192.168.174.1/bash /mnt/scripts
 
+# Scan for new SCSI devices by writing "- - -" to the scan file of each SCSI host
+for host in /sys/class/scsi_host/host*; do echo "- - -" | sudo tee $host/scan; done
+
+# RHEL 9 specific commands
+
+# Connect to Red Hat Connect with specified username and password
+rhc connect -u <username> -p <password>
+
+# Enable the CodeReady Builder repository for RHEL 9 for the current architecture
+sudo subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
+
+# Install the EPEL repository for RHEL 9
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm

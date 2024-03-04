@@ -51,6 +51,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/inst
 sudo snap install nvim  --classic -y
 #git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim 
 
+# Clones the repository containing bash scripts and copies backup zsh configuration files to the home directory.
 mkdir -p ~/git
 cd ~/git
-git clone 
+git clone https://github.com/TechnoHai/bash.git
+cp /bash/zsh_bacup_files/* ~/
+
