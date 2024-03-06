@@ -15,3 +15,7 @@ sudo subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rp
 
 # Install the EPEL repository for RHEL 9
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+
+# This loop continuously checks for TCP connections in the SYN_SENT state every 2 seconds using netstat.
+# It's useful for monitoring attempts to establish TCP connections from the local system to other hosts.
+ while true;do sleep 2s && sudo netstat -napotep|grep SYN_SENT; done
