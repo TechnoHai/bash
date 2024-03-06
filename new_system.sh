@@ -51,6 +51,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/inst
 sudo snap install nvim  --classic -y
 #git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim 
 
+apt install ncdu -y # Disk usage analyzer that shows disk usage in a graphical interface.
+
+sudo apt update && sudo apt install nala -y # nala is a fast alternative to apt and apt-get
+
 # Clones the repository containing bash scripts and copies backup zsh configuration files to the home directory.
 mkdir -p ~/git
 cd ~/git
