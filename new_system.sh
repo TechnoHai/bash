@@ -40,7 +40,10 @@ brew install dust
 brew install bat
 
 # Installs 'tldr', a simplified and community-driven man pages with practical examples
-brew install tldr   
+brew install tldr
+
+#nstall the TypeScript Language Server using Homebrew 
+brew install typescript-language-server
 
 # Install 'zsh', a shell designed for interactive use and a powerful scripting language.
 sudo apt install zsh -y
