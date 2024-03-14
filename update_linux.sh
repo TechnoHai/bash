@@ -7,10 +7,10 @@
 os=$(grep -w ID  /etc/os-release)
 
 #log files for the updating process
-touch /var/log/update_linux_log
-touch /var/log/update_linux_error
-update_log=/var/log/update_linux_log
-error_log=/var/log/update_linux_error
+touch /tmp/update_linux_log
+touch /tmp/update_linux_error
+update_log=/tmp/update_linux_log
+error_log=/tmp/update_linux_error
 
 #a function that check the exit code after the update is running and tell the user where to look for logs
 #This code defines a function called check_exit_code that checks the exit code of the last command. If the exit code is not 0, it prints an error message with the name of the error log file. Otherwise, it prints a success message with the name of the update log file
@@ -25,7 +25,7 @@ check_exit_code() {
 
 #check the ID  field and using the right package management to run update .
 #check if the os is Centos
-if [[ $os == "ID="centos"" ]] || [[ "$os" == "ID=fedora" ]] || [[ $os == "ID=rocky" ]] || [[ $os == "rhel" ]]
+if [ $os == "ID="centos"" ] || [ "$os" == "ID=fedora" ] || [ $os == "ID=rocky" ] || [ $os == "rhel" ]
 then
     echo "The OS is Centos "
     sleep 3
@@ -36,7 +36,7 @@ then
 
 
 #check if the os is Ubuntu or popOS
-elif [[ $os == "ID=ubuntu" ]] || [[ $os == "ID=pop" ]] 
+elif [ $os == "ID=ubuntu" ] || [ $os == "ID=pop" ] 
 then
      echo "The OS is either Ubuntu or popOS "
      sleep 3
