@@ -1,5 +1,5 @@
 os=$(grep -w ID  /etc/os-release)
-if [[ $os == "rhel" ]]
+if [[ $os == "ID="rhel"" ]]
 then
     echo "The OS is Centos "
     sleep 3
