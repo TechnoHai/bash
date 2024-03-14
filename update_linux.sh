@@ -25,7 +25,7 @@ check_exit_code() {
 
 #check the ID  field and using the right package management to run update .
 #check if the os is Centos
-if [ $os == "ID="centos"" ] || [ "$os" == "ID=fedora" ] || [ $os == "ID=rocky" ] || [ $os == "rhel" ]
+if [ $os == "ID=centos" ] || [ "$os" == "ID=fedora" ] || [ $os == "ID=rocky" ] || [ $os == "ID=rhel" ]
 then
     echo "The OS is Centos "
     sleep 3
