@@ -5,6 +5,9 @@ sudo mount -t cifs -o username=hai,password= //192.168.174.1/bash /mnt/scripts
 # Scan for new SCSI devices by writing "- - -" to the scan file of each SCSI host
 for host in /sys/class/scsi_host/host*; do echo "- - -" | sudo tee $host/scan; done
 
+# This loop continuously checks for TCP connections in the SYN_SENT state every 2 seconds using netstat.
+while true;do sleep 2s && netstat -napotep|grep SYN_SENT; done
+
 # RHEL 9 specific commands
 
 # Connect to Red Hat Connect with specified username and password
