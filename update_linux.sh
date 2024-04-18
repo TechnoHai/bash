@@ -46,6 +46,8 @@ then
     #check if the update went successfully or not and log it.
     check_exit_code
 
+else
+    echo "The OS is not supported"
 fi
 
 
